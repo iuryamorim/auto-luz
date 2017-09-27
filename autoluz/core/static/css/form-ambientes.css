@@ -4,4 +4,5 @@
 .cl-block                               { border: 1px solid #333; border-radius: 5px; margin: 5px; padding: 10px; }
 .cl-acessa                              { background-color: #FFFFCC; }
 .cl-apagada                             { background-color: #EEE; }
-
+.cl-inline                              { display: inline-flex; }
+.cl-label-size                          { font-size: 22px; margin-right: 10px; }

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block style %}
+<link href="{% static 'css/form-ambientes.css' %}" rel="stylesheet" />
+{% endblock style %}
+
+{% block content %}
+<!-- OVERVIEW -->
+<div class="row">
+    <div class="container">
+        <h1>Dispositivos</h1>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        {% for dispositivo in dispositivos %}
+            <div class="cl-inline">
+                <label class="cl-label-size">{{ dispositivo.name }} - </label>
+                {% if dispositivo.status %}
+                <a class="btn btn-default" href="{% url 'dispositivos:update' dispositivo.id %}" role="button">Ligar</a>
+                {% else %}
+                <a class="btn btn-default" href="{% url 'dispositivos:update' dispositivo.id %}" role="button">Desligar</a>
+                {% endif %}
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- OVERVIEW -->
+{% endblock content %}

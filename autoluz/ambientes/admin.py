@@ -3,7 +3,7 @@ from autoluz.ambientes.models import Ambiente
 
 
 class AmbienteModelAdmin(admin.ModelAdmin):
-    list_display = ('name', 'type', 'status')
-    search_fields = ('name', 'type', 'status')
+    list_display = ('name',)
+    search_fields = ('name',)
 
 admin.site.register(Ambiente, AmbienteModelAdmin)

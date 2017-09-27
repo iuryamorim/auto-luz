@@ -22,6 +22,7 @@ urlpatterns = [
     url(r'^$', home, name='home'),
     url(r'^login/', include('autoluz.login.urls', namespace='login')),
     url(r'^ambientes/', include('autoluz.ambientes.urls', namespace='ambientes')),
+    url(r'^dispositivos/', include('autoluz.dispositivos.urls', namespace='dispositivos')),
 
     url(r'^admin/', admin.site.urls),
 ]

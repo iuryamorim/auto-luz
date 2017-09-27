@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'autoluz.core',
     'autoluz.login.apps.UserLogin',
     'autoluz.ambientes.apps.AmbientesConfig',
+    'autoluz.dispositivos.apps.DispositivosConfig',
+    'autoluz.permissoes.apps.PermissoesConfig',
 ]
 
 MIDDLEWARE = [

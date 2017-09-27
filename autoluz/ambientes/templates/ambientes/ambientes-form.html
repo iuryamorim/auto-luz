@@ -12,24 +12,11 @@
     <div class="container">
         <h1>Controlador</h1>
         {% for ambiente in ambientes %}
-                {% if ambiente.status %}
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 cl-block cl-acessa">
-                {% else %}
-            <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 cl-block cl-apagada">
-                {% endif %}
-                <h3 class="text-center"><strong>{{ ambiente.name }}</strong></h3>
-                {% if ambiente.status %}
-                <h4 class="text-center">As luzes estao acesas</h4>
-                    {% if ambiente.visible %}
-                    <a href="{% url 'ambientes:update' ambiente.id %}" class="btn btn-default center-block border">Acender Luzes</a>
-                    {% endif %}
-                {% else %}
-                <h4 class="text-center">As luzes estao apagadas</h4>
-                    {% if ambiente.visible %}
-                    <a href="{% url 'ambientes:update' ambiente.id %}" class="btn btn-default center-block border">Apagar Luzes</a>
-                    {% endif %}
-                {% endif %}
-            </div>
+            <a href="{% url 'ambientes:dispositivos' ambiente.id %}">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 cl-block cl-apagada">
+                    <h3 class="text-center"><strong>{{ ambiente.name }}</strong></h3>
+                </div>
+            </a>
         {% endfor %}
         <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
         </div>
